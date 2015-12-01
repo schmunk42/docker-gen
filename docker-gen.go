@@ -45,6 +45,13 @@ type Event struct {
 	Image       string `json:"from"`
 }
 
+type Network struct {
+	Name		 string
+	IP           string
+	IP6LinkLocal string
+	IP6Global    string
+}
+
 type Address struct {
 	IP           string
 	IP6LinkLocal string
@@ -64,6 +71,7 @@ type Volume struct {
 type RuntimeContainer struct {
 	ID           string
 	Addresses    []Address
+	Networks     []Network
 	Gateway      string
 	Name         string
 	Hostname     string
